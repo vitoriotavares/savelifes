@@ -1,0 +1,60 @@
+<%= link_to t('helpers.links.new'), new_city_path, class: 'ui right floated mini primary button' %>
+<h1 class="ui dividing header"><%= City.model_name.human.pluralize %></h1>
+
+<div class="ui styled fluid accordion">
+  <div class="title active">
+    <i class="dropdown icon"></i>
+    <%= t('helpers.titles.search_filter') %>
+  </div>
+  <div class="content">
+    <%= search_form_for @q, html: { class: 'ui tinny form' } do |f| %>
+      <div class="fields">
+         <div class="three wide field">
+            <%= f.label :name %>
+            <%= f.search_field :name_cont, class: 'somenteLetras', maxlength: 100  %>
+          </div>
+        </div>
+      <div class="fields">
+        <div class="field">
+          <%= link_to t('helpers.links.clear'), cities_path, class: 'ui gray button' %>
+          <%= f.submit t('helpers.links.search'), class: "ui blue button", data: {tooltip: t('ransack.search'), inverted: ''} %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="ui orange segment">
+  <table class="ui striped table">
+    <thead>
+      <tr>
+        <th><%= sort_link(@q, :name, City.human_attribute_name(:name)) %></th>
+        <th><%= sort_link(@q, :state, City.human_attribute_name(:state)) %></th>
+        <th class="center aligned" style="width: 5%;"><%= t('helpers.actions') %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @cities.each do |city| %>
+      <tr>
+        <td><%= city.name %></td>
+        <td><%= city.state.name %></td>
+        <td style="width: 5%;">
+          <div class="ui icon buttons">
+            <%= link_to(content_tag(:i, nil, class: 'info circle icon'), city, class: 'ui button', data: {tooltip: t('helpers.links.show'), inverted: ''}) %>
+            <%= link_to content_tag(:i, nil, class: 'edit outline icon'), edit_city_path(city), class: 'ui button', data: {tooltip: t('helpers.links.edit'), inverted: ''} %>
+            <%= link_to content_tag(:i, nil, class: 'trash alternate outline red icon'), city, method: :delete, data: { confirm: t('messages.destroy.confirm'), tooltip: t('helpers.links.destroy'), inverted: '' }, class: 'ui button' %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <div class="ui borderless menu">
+    <%= paginate @cities %>
+    <div class="right menu">
+      <p class="item"><%= "#{t('views.pagination.records')} #{@cities.size} / #{@cities.total_count}" %></p>
+    </div>
+  </div>
+  <br>
+</div>

@@ -1,0 +1,64 @@
+<%= link_to t('helpers.links.new'), new_state_path, class: 'ui right floated mini primary button' %>
+<h1 class="ui dividing header"><%= State.model_name.human.pluralize %></h1>
+
+<div class="ui styled fluid accordion">
+  <div class="title active">
+    <i class="dropdown icon"></i>
+    <%= t('helpers.titles.search_filter') %>
+  </div>
+  <div class="content active">
+    <%= search_form_for @q, html: { class: 'ui tinny form' } do |f| %>
+      <div class="fields">
+                  <div class="three wide field">
+            <%= f.label :name %>
+            <%= f.search_field :name_cont, class: 'somenteLetras', maxlength: 100  %>
+          </div>
+                  <div class="three wide field">
+            <%= f.label :initials %>
+            <%= f.search_field :initials_cont, class: 'somenteLetras', maxlength: 100  %>
+          </div>
+              </div>
+      <div class="fields">
+        <div class="field">
+          <%= link_to t('helpers.links.clear'), states_path, class: 'ui gray button' %>
+          <%= f.submit t('helpers.links.search'), class: "ui blue button", data: {tooltip: t('ransack.search'), inverted: ''} %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="ui orange segment">
+  <table class="ui striped table">
+    <thead>
+      <tr>
+                <th><%= sort_link(@q, :name, State.human_attribute_name(:name)) %></th>
+                <th><%= sort_link(@q, :initials, State.human_attribute_name(:initials)) %></th>
+                <th class="center aligned" style="width: 5%;"><%= t('helpers.actions') %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @states.each do |state| %>
+      <tr>
+                <td><%= state.name %></td>
+                <td><%= state.initials %></td>
+                <td style="width: 5%;">
+          <div class="ui icon buttons">
+            <%= link_to(content_tag(:i, nil, class: 'info circle icon'), state, class: 'ui button', data: {tooltip: t('helpers.links.show'), inverted: ''}) %>
+            <%= link_to content_tag(:i, nil, class: 'edit outline icon'), edit_state_path(state), class: 'ui button', data: {tooltip: t('helpers.links.edit'), inverted: ''} %>
+            <%= link_to content_tag(:i, nil, class: 'trash alternate outline red icon'), state, method: :delete, data: { confirm: t('messages.destroy.confirm'), tooltip: t('helpers.links.destroy'), inverted: '' }, class: 'ui button' %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <div class="ui borderless menu">
+    <%= paginate @states %>
+    <div class="right menu">
+      <p class="item"><%= "#{t('views.pagination.records')} #{@states.size} / #{@states.total_count}" %></p>
+    </div>
+  </div>
+  <br>
+</div>

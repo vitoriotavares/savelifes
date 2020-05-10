@@ -1,0 +1,38 @@
+<div class="ui segment">
+  <%= form_for(@address, html: { class: 'ui form' }) do |f| %>
+    <%= render partial: 'layouts/errors_messages', locals: { model: @address } %>
+    <%= f.hidden_field :client_id %>
+    <div class="required eight wide field">
+      <%= f.label :address %>
+      <%= f.text_field :address, class: '', maxlength: 100  %>
+    </div>
+        <div class="required eight wide field">
+      <%= f.label :number %>
+      <%= f.text_field :number, class: '', maxlength: 100  %>
+    </div>
+        <div class="required eight wide field">
+      <%= f.label :neighborhood %>
+      <%= f.collection_select :neighborhood_id, Neighborhood.all, :id, :name, {prompt: 'Selecione um Bairro'}, {class: 'ui fluid search dropdown'} %>
+    </div>
+        <div class="required eight wide field">
+      <%= f.label :zip_code %>
+      <%= f.text_field :zip_code, class: 'cep', maxlength: 100  %>
+    </div>
+    <div class="required eight wide field">
+      <%= f.label :complement %>
+      <%= f.text_field :complement, class: '', maxlength: 100  %>
+    </div>
+        <div class="required eight wide field">
+      <%= f.label :reference_point %>
+      <%= f.text_field :reference_point, class: '', maxlength: 100  %>
+    </div>
+        <div class="required eight wide field">
+      <%= f.label :comments %>
+      <%= f.text_area :comments, class: "", maxlength: 100  %>
+    </div>
+    <div class="actions">
+      <%= link_to t('helpers.links.cancel'), addresses_path, class: 'ui button floated' %>
+      <%= f.submit nil, class: 'ui green button' %>
+    </div>
+  <% end %>
+</div>

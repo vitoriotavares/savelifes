@@ -1,0 +1,17 @@
+<div class="ui segment">
+  <%= form_for(@neighborhood, html: { class: 'ui form' }) do |f| %>
+    <%= render partial: 'layouts/errors_messages', locals: { model: @neighborhood } %>
+        <div class="required eight wide field">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: '', maxlength: 100  %>
+    </div>
+        <div class="required eight wide field">
+      <%= f.label :city %>
+      <%= f.text_field :city, class: '', maxlength: 100  %>
+    </div>
+        <div class="actions">
+      <%= link_to t('helpers.links.cancel'), neighborhoods_path, class: 'ui button floated' %>
+      <%= f.submit nil, class: 'ui green button' %>
+    </div>
+  <% end %>
+</div>

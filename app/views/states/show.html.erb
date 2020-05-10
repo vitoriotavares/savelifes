@@ -1,0 +1,14 @@
+<h1 class="ui dividing header"><%= State.model_name.human %></h1>
+<div class="ui green segment">
+      <p>
+      <strong><%= State.human_attribute_name :name %>:</strong>
+      <%= @state.name %>
+    </p>
+      <p>
+      <strong><%= State.human_attribute_name :initials %>:</strong>
+      <%= @state.initials %>
+    </p>
+  </div>
+
+<%= link_to(t('helpers.links.back'), states_path, class: 'ui button white') %>
+<%= link_to t('helpers.links.edit'), edit_state_path(@state), class: 'ui green button' %>

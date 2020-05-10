@@ -1,0 +1,37 @@
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui teal image header">
+      <i class="address card icon"></i>
+      <div class="content">
+       <%= I18n.t("devise.titles.sign_up") %>
+      </div>
+    </h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name),html: {class:"ui large form" }) do |f| %>
+      <div class="ui stacked segment">
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Novo endereço de e-mail" %>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <%= f.password_field :password, autocomplete: "current-password", placeholder:"Senha" %>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <%= f.password_field :password, autocomplete: "current-password", placeholder:"Confirmação da Senha" %>
+          </div>
+        </div>
+        <%= f.submit I18n.t("devise.buttons.sign_up"), class: 'ui fluid large teal submit button' %>
+      </div>
+    <% end %> 
+  </div>
+</div>

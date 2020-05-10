@@ -1,0 +1,11 @@
+<% if model.errors.any? %>
+  <div class="ui negative message">
+    <i class="close icon"></i>
+      <div class="header">Ocorreu o(s) seguinte(s) erro(s):</div>
+    <ul class="list">
+    <% model.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

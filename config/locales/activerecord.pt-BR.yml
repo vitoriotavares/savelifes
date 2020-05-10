@@ -1,0 +1,82 @@
+pt-BR:
+  activerecord:
+    errors:
+      user:
+        not_found: 'Usuário não encontrado.'
+      messages:
+        record_invalid: "A validação falhou: %{errors}"
+        restrict_dependent_destroy:
+          one: "Não é possível excluir este registro, pois existe %{record} relecionado(a)."
+          has_many: "Não é possível excluir este registro, pois existem %{record} relacionados(as)."
+      models:
+    models:
+      user: "Usuário"
+      client: "Cliente"
+      service: "Serviço"
+      order_service: "Ordem de Serviço"
+      type_payment: 'Tipo de Pagamento'
+      address: 'Endereço'
+      city: 'Município'
+      state: 'Estado'
+      neighborhood: 'Bairro'
+    attributes:
+      type_payment:
+        description: 'Descrição'
+      client:
+        name: 'Nome'
+        contact: 'Contato'
+        cpf_cnpj: 'CPF/CNPJ'
+        address: 'Endereço'
+        full_address: 'Endereço'
+        number: 'Número'
+        neighborhood: 'Bairro'
+        zip_code: 'CEP'
+        phone: 'Telefone'
+        cell_phone: 'Celular'
+        email: 'Email'
+      address:
+        address: 'Logradouro'
+        full_address: 'Endereço Completo'
+        complement: 'Complemento' 
+        number: 'Número'
+        neighborhood: 'Bairro'
+        zip_code: 'CEP'
+        reference_point: 'Ponto de Referência'
+        comments: 'Observações'
+      service:
+        user: 'Usuário'
+        name: 'Nome'
+        description: 'Descrição'
+        price: 'Preço'
+      user:
+        corporation: 'Empresa'
+        name: 'Nome'
+        cell_phone: 'Celular'
+        phone: 'Telefone'
+        address: 'Endereço'       
+      order_service:
+        client: 'Cliente'
+        description: 'Descrição'
+        init_date: 'Data Inicial'
+        end_date: 'Data Final'
+        user: 'Usuário'
+        address: 'Endereço'
+        deadline: 'Data Entrega'
+        term: 'Prazo(Dias)'
+        discount: 'Desconto(R$)'
+        type_payment_id: 'Tipo de Pagamento'
+        type_payment: 'Tipo de Pagamento'
+        type payment: 'Pagou com'
+        total_value: 'Valor Total'
+        services: 'Produtos/Serviços'
+        status: 'Status'
+      city: 
+        name: 'Nome'
+        state: 'Estado'
+      state:
+        name: 'Nome'
+      neighborhood:
+        name: 'Nome'
+        city: 'Município'
+      
+

@@ -1,0 +1,441 @@
+pt-BR:
+  enums:
+    orcamento: "Orçamento" 
+    agendado: "Agendado" 
+    em_andamento: "Em Andamento"
+    concluido: "Concluído"
+    faturado: "Faturado"
+    cancelado: "Cancelado"
+    reprovado: "Reprovado"
+  menu:
+    top:
+      home: "Agenda"
+      users: "Usuários"
+      clients: "Clientes"
+      services: "Serviços"
+      order_services: "Ordens de Serviço"
+      my_account: "Meus Dados"
+      settings:
+        title: 'Configurações'
+        type_payment: 'Tipos de Pagamento'
+        cities: 'Cidades'
+        neighborhoods: 'Bairros'
+  date:
+    abbr_day_names:
+    - Dom
+    - Seg
+    - Ter
+    - Qua
+    - Qui
+    - Sex
+    - Sáb
+    abbr_month_names:
+    -
+    - Jan
+    - Fev
+    - Mar
+    - Abr
+    - Mai
+    - Jun
+    - Jul
+    - Ago
+    - Set
+    - Out
+    - Nov
+    - Dez
+    day_names:
+    - Domingo
+    - Segunda
+    - Terça
+    - Quarta
+    - Quinta
+    - Sexta
+    - Sábado
+    formats:
+      default: ! '%d/%m/%Y'
+      date_time: ! '%d/%m/%Y h:m h'
+      long: ! '%d de %B de %Y'
+      long_week: ! '%A, %d de %B de %Y'
+      short: ! '%d de %B'
+      short2: ! '%d %b'
+      time: ! '%H:%M'
+      month: ! '%B'
+    month_names:
+    -
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: aproximadamente 1 hora
+        other: aproximadamente %{count} horas
+      about_x_months:
+        one: aproximadamente 1 mês
+        other: aproximadamente %{count} meses
+      about_x_years:
+        one: aproximadamente 1 ano
+        other: aproximadamente %{count} anos
+      almost_x_years:
+        one: quase 1 ano
+        other: quase %{count} anos
+      half_a_minute: meio minuto
+      less_than_x_minutes:
+        one: menos de um minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: mais de 1 ano
+        other: mais de %{count} anos
+      x_days:
+        one: 1 dia
+        other: ! '%{count} dias'
+      x_minutes:
+        one: 1 minuto
+        other: ! '%{count} minutos'
+      x_months:
+        one: 1 mês
+        other: ! '%{count} meses'
+      x_seconds:
+        one: 1 segundo
+        other: ! '%{count} segundos'
+    prompts:
+      day: Dia
+      hour: Hora
+      minute: Minuto
+      month: Mês
+      second: Segundo
+      year: Ano
+  errors: &errors
+    format: ! '%{attribute} %{message}'
+    messages:
+      situacao_negada: 'Ação bloqueada pelo controle de situação'
+      inatimar_mov: "Movimentação inativada"
+      confirmar_mov: "Movimentação confirmada"
+      not_saved: 'Não foi possível salvar'
+      invalid_field: 'Favor verifique o(s) seguinte(s) campo(s): %{campos}'
+      destroy_exception: Não foi possível apagar.
+      accepted: deve ser aceito.
+      blank: "obrigatório"
+      required: obrigatório
+      confirmation: não está de acordo.
+      empty: não pode ficar vazio.
+      equal_to: deve ser igual a %{count}.
+      even: deve ser par.
+      exclusion: não está disponível.
+      greater_than: deve ser maior que %{count}.
+      greater_than_or_equal_to: deve ser maior ou igual a %{count}.
+      inclusion: não está incluído na lista.
+      invalid: campo inválido.
+      less_than: deve ser menor que %{count}.
+      less_than_or_equal_to: deve ser menor ou igual a %{count}.
+      not_a_number: não é um número.
+      not_an_integer: não é um número inteiro.
+      odd: deve ser ímpar.
+      record_invalid: ! 'A validação falhou: %{errors}'
+      taken: já existente.
+      too_long: ! 'é muito longo (máximo: %{count} caracteres)'
+      too_short: ! 'é muito curto (mínimo: %{count} caracteres)'
+      wrong_length: não possui o tamanho esperado (%{count} caracteres).
+      form_errors: 'Não foi possível realizar esta ação:'
+    template:
+      body: ! 'Por favor, verifique o(s) seguinte(s) campo(s):'
+      header:
+        one: ! 'Não foi possível gravar %{model}: 1 erro'
+        other: ! 'Não foi possível gravar %{model}: %{count} erros.'
+  condicao:
+    sim: "Sim"
+    nao: "Não"
+  success:
+    save: "Salvo com sucesso."
+  helpers:
+    actions: "Ações"
+    links:
+      add_classification: 'Adicionar Cominação Legal'
+      list_classification: 'Listar Cominação Legal'
+      add_processo_tipo_processo: 'Adicionar Tipo Processos'
+      add_acusacao: 'Adicionar Imputação'
+      add_penalidade: 'Adicionar Penalidades'
+      add_movimentacoes: 'Adicionar Movimentações'
+      list_movimentacoes: 'Listar Movimentações'
+      edit: "Editar"
+      back: "Voltar"
+      cancel: "Cancelar"
+      confirm: "Tem certeza que deseja realizar esta ação?"
+      destroy: "Apagar"
+      generate_distribution_register: "Cadastro de Distribuição"
+      generate_distribution: "Emitir Distribuição"
+      confirmar: "Confirmar"
+      inativar: "Inativar"
+      new: "Novo"
+      show: "Mostrar"
+      show_os: 'Ver OS'
+      complete: "Concluir"
+      autorize: "Autorizar"
+      not_autorize: "Não Autorizar"
+      free: "Liberar"
+      finish: "Finalizar"
+      next: "Próximo"
+      previous: "Anterior"
+      detail: "Detalhe"
+      permissions: "Permissões"
+      forgot_password: "Esqueceu a senha?"
+      unlock_account: "Desbloquear conta?"
+      commit: "Sim"
+      not: "Não"
+      clear: "Limpar"
+      search: "Pesquisar"
+      lotacao: 'Lotação'
+      cargo: 'Cargo'
+      clone: 'Duplicar'
+      reports:
+        diligence: 'Ver Diligência'
+      page_entries_info:
+        more_pages:
+          display_entries: "Exibindo %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> de um total de <b>%{total}</b>"
+        one_page:
+          display_entries:
+            one: "Exibindo <b>1</b> %{entry_name}"
+            other: "Exibindo <b>%{count}</b> %{entry_name}"
+            zero: "Nenhum %{entry_name} encontrado"
+    titles:
+      edit: "Editar %{model}"
+      save: "Salvar %{model}"
+      new: "Cadastrar %{model}"
+      free: "Liberar %{model}"
+      complete: "Concluir %{model}"
+      finish: "Finalizar %{model}"
+      delete: "Apagar %{model}"
+      details: 'Detalhe'
+      modal:
+        details: 'Detalhe'
+        version: 'Versão'
+      alert: "Alerta"
+      search_filter: "Filtro de Pesquisa"
+      add: "Adicionar"
+    select:
+      prompt: "Selecione"
+      no_one: "Nenhum registro foi encontrado."
+    submit:
+      create: "Cadastrar"
+      submit: "Salvar"
+      update: "Atualizar"
+  breadcrumb:
+    new: 'Novo'
+    edit: 'Editar'
+    show: 'Detalhar'
+    permissions: "Permissões"
+  views:
+    pagination:
+      first: "&laquo; Primeiro"
+      last: "Último &raquo;"
+      next: Próximo &rsaquo;
+      previous: "&lsaquo; Anterior"
+      truncate: "&hellip;"
+      records: "Registros:"
+  number:
+    currency:
+      format:
+        delimiter: .
+        format: ! '%u %n'
+        precision: 2
+        separator: ! ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: R$
+    format:
+      delimiter: .
+      precision: 3
+      separator: ! ','
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion:
+            one: bilhão
+            other: bilhões
+          million:
+            one: milhão
+            other: milhões
+          quadrillion:
+            one: quatrilhão
+            other: quatrilhões
+          thousand: mil
+          trillion:
+            one: trilhão
+            other: trilhões
+          unit: ''
+      format:
+        delimiter: .
+        precision: 2
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: 'Byte'
+            other: 'Bytes'
+          gb: 'GB'
+          kb: 'KB'
+          mb: 'MB'
+          tb: 'TB'
+    percentage:
+      format:
+        delimiter: .
+    precision:
+      format:
+        delimiter: .
+  support:
+    array:
+      last_word_connector: ! ' e '
+      two_words_connector: ! ' e '
+      words_connector: ! ', '
+  time:
+    am: ''
+    formats:
+      default: ! '%d/%m/%Y, %H:%M:%S'
+      long: ! '%d de %B de %Y, %H:%M'
+      medium: ! '%d/%m/%Y %H:%M'
+      time: ! '%H:%M'
+      short: ! '%d de %B, %H:%M'
+      welcome: ! '%d/%m/%Y às %H:%M'
+    pm: ''
+  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
+  system:
+    initials: 'Blitz'
+    name: 'Sistema de Blitz'
+    version: 'v1.0.0'
+    indentifique: 'Identifique-se'
+    entries: 'Cadastros'
+    password: 'Senha'
+    company: 'Departamento Estadual de Trânsito - DETRAN-CE'
+    address: ' - Sede: Av. Godofredo Maciel, 2900 - Maraponga - Fortaleza/Ce CEP: 60.710-903'
+    contact: 'suporte aos sistemas:  (85) 3101.5820 ou 3101.5887 | DETRAN: 0800 275 6768 / Perícia: 154 - CNPJ: 07.135.668/0001-95'
+    copyright: '© 2011 - Governo do Estado do Ceará. Todos os direitos reservados.'
+    message:
+      not_permission: 'Usuário não possui permissão para acessar essa área:'
+    tab:
+      envolvidos: 'Envolvidos'
+      bases: 'Bases'
+      sectors: 'Setores'
+      lotacao_empresa: 'Empresa Lotação'
+      versions: 'Versões'
+    welcome: 'Bem vindo(a) ao '
+    last_sign_in: 'Seu último acesso foi em'
+  messages:
+    create:
+      notice: 'Registro incluído com sucesso.'
+      mov_ativado: 'Movimentação Concluída'
+      mov_inativado: 'Movimentação Inativada'
+    update:
+      not_permitted: "Registro não pode ser atualizado."
+      notice: 'Registro alterado com sucesso.'
+    destroy:
+      notice: 'Registro excluído com sucesso.'
+      confirm: 'Tem certeza que deseja excluir?'
+    complete:
+      notice: 'Concluído com sucesso.'
+      error: 'Ocorreu um erro ao concluir.'
+      confirm: 'Tem certeza que deseja concluir?'
+    procs_concluir:
+      notice: 'Processo Concluído com sucesso'
+      error: 'Ocorreu um erro. Verifique a situação do Processo'
+    procs_salvar:
+      notice: 'Processo salvo com sucesso'
+      error: 'Ocorreu um erro. Verifique a situação do Processo'
+    autorize:
+      notice: 'Autorizada com sucesso.'
+      error: 'Ocorreu um erro ao autorizar.'
+      confirm: 'Tem certeza que deseja autorizar?'
+    not_autorize:
+      notice: 'Não autorizada com sucesso.'
+      error: 'Ocorreu um erro ao não autorizar.'
+      confirm: 'Tem certeza que deseja não autorizar?'
+    free:
+      notice: 'Liberada com sucesso.'
+      error: 'Ocorreu um erro ao liberar.'
+      confirm: 'Tem certeza que deseja liberar?'
+    finish:
+      notice: 'Finalizada com sucesso.'
+      error: 'Ocorreu um erro ao finalizar.'
+      confirm: 'Tem certeza que deseja finalizar?'
+    presente:
+      notice: 'Presença confirmada com sucesso.'
+      error: 'Ocorreu um erro ao confirmar presença.'
+      confirm: 'Tem certeza que deseja confirmar a presença?'
+    absent:
+      notice: 'Ausência confirmada com sucesso.'
+      error: 'Ocorreu um erro ao confirmar ausência.'
+      confirm: 'Tem certeza que deseja confirmar a ausência?'
+    routes:
+      notice: 'Rotas atualizadas com sucesso.'
+      error: 'Ocorreu um erro ao atualizar as rotas.'
+    rescue: 'Ocorreu um erro ao realizar esta ação.'
+    not_permited: 'Ação não permitida.'
+    audited:
+      create: "Cadastrado"
+      update: "Atualizado"
+      destroy: "Excluído"
+    constante:
+      new: "Novo"
+      create: "Cadastrar"
+      edit: "Editar"
+      update: "Atualizar"
+      destroy: "Excluir"
+      show: "Mostrar"
+  activemodel:
+    errors:
+      movimentacao_invalida: "Movimentação invalida"
+      viproc_errado: "Processo não encontrado"
+      processo_situacao_dinvalida: 'Data invalida'
+      <<: *errors
+  activerecord:
+    models:
+      vip/lotacao: 'Lotação'
+      vip/motivo_tramite: 'Motivo Trâmite'
+      vip/orgao: 'Órgão'
+      vip/processo: 'Processo'
+      cet/auto: 'Auto'
+      cet/requerente: 'Requerente'
+      cet/requerente_endereco: 'Endereço'
+    attributes:
+      vip/lotacao:
+        vip_orgao_id: 'Órgão'
+      vip/motivo_tramite:
+        descricao: 'Descrição'
+      vip/orgao:
+        descricao: 'Descrição'
+      vip/processo:
+        viproc: 'Nº Viproc'
+      cet/auto:
+        auto: 'Nº Auto'
+        codigo_infracao: 'Código Infração'
+        descricao_infracao: 'Descrição Infração'
+        numero: 'Número Auto'
+      cet/requerente:
+        requerente_enderecos: 'Endereço'
+        cpf_cnpj: 'CPF/CNPJ'
+      cet/requerente_endereco:
+        logradouro: 'Logradouro'
+        numero_logradouro: 'Número'
+        cep: 'CEP'
+      cet/processo:
+        autos: 'Auto'

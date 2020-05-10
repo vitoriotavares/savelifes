@@ -1,0 +1,14 @@
+<h1 class="ui dividing header"><%= Neighborhood.model_name.human %></h1>
+<div class="ui green segment">
+      <p>
+      <strong><%= Neighborhood.human_attribute_name :name %>:</strong>
+      <%= @neighborhood.name %>
+    </p>
+      <p>
+      <strong><%= Neighborhood.human_attribute_name :city %>:</strong>
+      <%= @neighborhood.city %>
+    </p>
+  </div>
+
+<%= link_to(t('helpers.links.back'), neighborhoods_path, class: 'ui button white') %>
+<%= link_to t('helpers.links.edit'), edit_neighborhood_path(@neighborhood), class: 'ui green button' %>

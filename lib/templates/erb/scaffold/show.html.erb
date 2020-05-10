@@ -1,0 +1,12 @@
+<h1 class="ui dividing header"><%%= <%= singular_table_name.camelcase %>.model_name.human %></h1>
+<div class="ui green segment">
+  <% attributes.each do |attribute| -%>
+    <p>
+      <strong><%%= <%= singular_table_name.camelcase %>.human_attribute_name :<%= attribute.name %> %>:</strong>
+      <%%= @<%= singular_table_name %>.<%= attribute.name %> %>
+    </p>
+  <% end -%>
+</div>
+
+<%%= link_to(t('helpers.links.back'), <%= plural_table_name %>_path, class: 'ui button white') %>
+<%%= link_to t('helpers.links.edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: 'ui green button' %>

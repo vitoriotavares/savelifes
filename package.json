@@ -1,0 +1,16 @@
+{
+    "name": "osservice",
+    "private": true,
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "flatpickr": "^4.6.3",
+        "jquery-mask-plugin": "^1.14.16"
+    },
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://norbdus@bitbucket.org/GabrielPessoa001/os-service.git",
+    "author": "Jorge Vitório Tavares <vitorio.tavares@gmail.com>",
+    "license": "MIT"
+}

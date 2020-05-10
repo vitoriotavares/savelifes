@@ -1,0 +1,42 @@
+  <%= form_for(@user, html: { class: 'ui form' }) do |f| %>
+    <%= render partial: 'layouts/errors_messages', locals: { model: @user } %>
+    <div class="two fields">
+      <div class="required twelve wide field">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: '' %>
+      </div>
+      <div class="required four wide field">
+        <%= f.label :email %>
+        <%= f.text_field :email, class: ''  %>
+      </div>
+    </div>
+    <div class="two fields">
+      <div class="required twelve wide field">
+        <%= f.label :corporation %>
+        <%= f.text_field :corporation, class: ''  %>
+      </div>
+      <div class="required four wide field">
+        <%= f.label :cnpj %>
+        <%= f.text_field :cnpj, class: 'cnpj'  %>
+      </div>
+    </div>
+    <div class="three fields">
+      <div class="required ten wide field">
+        <%= f.label :address %>
+        <%= f.text_field :address, class: ''  %>
+      </div>
+      <div class="required three wide field">
+        <%= f.label :phone %>
+        <%= f.text_field :phone, class: ''  %>
+      </div>
+      <div class="required three wide field">
+        <%= f.label :cell_phone %>
+        <%= f.text_field :cell_phone, class: ''  %>
+      </div>
+    </div>
+    <div class='field'>
+      <div class='actions'>
+        <%= f.submit nil, class: 'ui submit button' %>
+      </div>
+    </div>
+  <% end %>

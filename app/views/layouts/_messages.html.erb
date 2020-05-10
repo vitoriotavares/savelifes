@@ -1,0 +1,21 @@
+<% unless notice.blank? %>
+<p class="notice">
+<div class="ui info message">
+  <i class="close icon"></i>
+  <div class="header">
+    <%= notice %>
+  </div>
+</div>
+</p>
+<% end %>
+<% unless alert.blank? %>
+<p class="alert">
+<div class="ui negative message">
+  <i class="close icon"></i>
+  <div class="header">
+    <%= alert %>
+  </div>
+  <p>
+</p></div>
+</p>
+<% end %>
