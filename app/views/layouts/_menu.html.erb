@@ -2,15 +2,6 @@
   <%= link_to root_path, class: "#{active?("home")} item" do %>
     <%= I18n.t("menu.top.home") %>
   <% end %>
-  <%= link_to '#', class: "#{active?("clients")} item" do %>
-    <%= I18n.t("menu.top.clients") %>
-  <% end %>
-  <%= link_to order_services_path, class: "#{active?("order_services")} item" do %>
-    <%= I18n.t("menu.top.order_services") %>
-  <% end %>
-  <%= link_to services_path, class: "#{active?("services")} item" do %>
-    <%= I18n.t("menu.top.services") %>
-  <% end %>
   <div class="right menu">
     <div class="ui dropdown item">
       <%= I18n.t("menu.top.settings.title") %> <i class="dropdown icon"></i>

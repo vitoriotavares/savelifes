@@ -1,7 +1,6 @@
 <div class="ui segment">
   <%= form_for(@address, html: { class: 'ui form' }) do |f| %>
     <%= render partial: 'layouts/errors_messages', locals: { model: @address } %>
-    <%= f.hidden_field :client_id %>
     <div class="required eight wide field">
       <%= f.label :address %>
       <%= f.text_field :address, class: '', maxlength: 100  %>

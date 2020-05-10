@@ -11,10 +11,6 @@ pt-BR:
       models:
     models:
       user: "Usuário"
-      client: "Cliente"
-      service: "Serviço"
-      order_service: "Ordem de Serviço"
-      type_payment: 'Tipo de Pagamento'
       address: 'Endereço'
       city: 'Município'
       state: 'Estado'
@@ -22,18 +18,6 @@ pt-BR:
     attributes:
       type_payment:
         description: 'Descrição'
-      client:
-        name: 'Nome'
-        contact: 'Contato'
-        cpf_cnpj: 'CPF/CNPJ'
-        address: 'Endereço'
-        full_address: 'Endereço'
-        number: 'Número'
-        neighborhood: 'Bairro'
-        zip_code: 'CEP'
-        phone: 'Telefone'
-        cell_phone: 'Celular'
-        email: 'Email'
       address:
         address: 'Logradouro'
         full_address: 'Endereço Completo'
@@ -43,33 +27,12 @@ pt-BR:
         zip_code: 'CEP'
         reference_point: 'Ponto de Referência'
         comments: 'Observações'
-      service:
-        user: 'Usuário'
-        name: 'Nome'
-        description: 'Descrição'
-        price: 'Preço'
       user:
         corporation: 'Empresa'
         name: 'Nome'
         cell_phone: 'Celular'
         phone: 'Telefone'
         address: 'Endereço'       
-      order_service:
-        client: 'Cliente'
-        description: 'Descrição'
-        init_date: 'Data Inicial'
-        end_date: 'Data Final'
-        user: 'Usuário'
-        address: 'Endereço'
-        deadline: 'Data Entrega'
-        term: 'Prazo(Dias)'
-        discount: 'Desconto(R$)'
-        type_payment_id: 'Tipo de Pagamento'
-        type_payment: 'Tipo de Pagamento'
-        type payment: 'Pagou com'
-        total_value: 'Valor Total'
-        services: 'Produtos/Serviços'
-        status: 'Status'
       city: 
         name: 'Nome'
         state: 'Estado'

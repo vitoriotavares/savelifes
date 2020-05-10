@@ -41,11 +41,11 @@ $(document).on('turbolinks:load', function() {
     $(".telefone").mask("(00) 0000-00009");
 
     $('#calendar').fullCalendar({
-        events: '/order_services.json',
+        events: '/events.json',
         locale: 'pt-br',
         timeFormat: 'H:mm',
         dayClick: function(date, jsEvent, view) {
-            window.location.href = Routes.new_order_service_path({i: date.format()})
+            window.location.href = Routes.new_events_path({i: date.format()})
           }
     });
 

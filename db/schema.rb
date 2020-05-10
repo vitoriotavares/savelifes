@@ -46,8 +46,6 @@ ActiveRecord::Schema.define(version: 2020_04_06_150319) do
     t.text "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "client_id"
-    t.index ["client_id"], name: "index_addresses_on_client_id"
     t.index ["neighborhood_id"], name: "index_addresses_on_neighborhood_id"
   end
 
@@ -71,23 +69,6 @@ ActiveRecord::Schema.define(version: 2020_04_06_150319) do
     t.index ["state_id"], name: "index_cities_on_state_id"
   end
 
-  create_table "clients", force: :cascade do |t|
-    t.string "name"
-    t.string "cpf_cnpj"
-    t.string "address"
-    t.string "number"
-    t.string "neighborhood"
-    t.string "zip_code"
-    t.string "phone"
-    t.string "cell_phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "contact"
-    t.bigint "user_id"
-    t.string "email"
-    t.index ["user_id"], name: "index_clients_on_user_id"
-  end
-
   create_table "neighborhoods", force: :cascade do |t|
     t.string "name"
     t.bigint "city_id"
@@ -96,54 +77,9 @@ ActiveRecord::Schema.define(version: 2020_04_06_150319) do
     t.index ["city_id"], name: "index_neighborhoods_on_city_id"
   end
 
-  create_table "order_services", force: :cascade do |t|
-    t.bigint "client_id"
-    t.text "description"
-    t.datetime "init_date"
-    t.datetime "end_date"
-    t.bigint "user_id"
-    t.text "address"
-    t.date "deadline"
-    t.integer "term"
-    t.integer "type_payment_id"
-    t.decimal "total_value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "status"
-    t.decimal "discount", precision: 15, scale: 2
-    t.index ["client_id"], name: "index_order_services_on_client_id"
-    t.index ["user_id"], name: "index_order_services_on_user_id"
-  end
-
-  create_table "order_services_services", force: :cascade do |t|
-    t.bigint "order_service_id"
-    t.bigint "service_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "qtd"
-    t.index ["order_service_id"], name: "index_order_services_services_on_order_service_id"
-    t.index ["service_id"], name: "index_order_services_services_on_service_id"
-  end
-
-  create_table "services", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.decimal "price", precision: 15, scale: 2
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_services_on_user_id"
-  end
-
   create_table "states", force: :cascade do |t|
     t.string "name"
     t.string "initials"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "type_payments", force: :cascade do |t|
-    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -168,14 +104,7 @@ ActiveRecord::Schema.define(version: 2020_04_06_150319) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "addresses", "clients"
   add_foreign_key "addresses", "neighborhoods"
   add_foreign_key "cities", "states"
-  add_foreign_key "clients", "users"
   add_foreign_key "neighborhoods", "cities"
-  add_foreign_key "order_services", "clients"
-  add_foreign_key "order_services", "users"
-  add_foreign_key "order_services_services", "order_services"
-  add_foreign_key "order_services_services", "services"
-  add_foreign_key "services", "users"
 end

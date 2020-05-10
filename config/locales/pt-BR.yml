@@ -11,9 +11,6 @@ pt-BR:
     top:
       home: "Agenda"
       users: "Usuários"
-      clients: "Clientes"
-      services: "Serviços"
-      order_services: "Ordens de Serviço"
       my_account: "Meus Dados"
       settings:
         title: 'Configurações'

@@ -4,12 +4,6 @@ Rails.application.routes.draw do
   resources :neighborhoods
   resources :cities
   resources :states
-  resources :order_services do
-    collection do
-      get 'update_status'
-      get 'print_os'
-    end
-  end
   devise_for :admins
   devise_for :users
   root 'home#index'
